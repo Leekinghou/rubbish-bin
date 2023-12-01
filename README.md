@@ -1,15 +1,17 @@
+
 # Rubbish Bin 🗑️
 
-Welcome to the  **Rubbish Bin** , a repository dedicated to collecting temporary code snippets in various languages. Sometimes, we all need a place to toss our quick hacks and experiments.
+Welcome to the **Rubbish Bin**, a repository dedicated to collecting temporary code snippets, experiments, and Kubernetes configurations in various languages.
 
-Feel free to browse through the folders for code snippets in different programming languages, including Go, Python, Shell, Java, and more.
+Feel free to browse through the folders for code snippets in different programming languages, including Go, Python, Shell, Java, and more. Additionally, you'll find Kubernetes YAML configuration files for your deployment needs.
 
 ## Structure
 
-* 🐍 Python: Here lies Python snippets.
-* 🚀 Go: A space for Go language experiments.
-* ☕ Java: Java code snippets reside here.
-* 🐚 Shell: Shell scripts and commands can be found in this bin.
+- 🐍 Python: Here lies Python snippets.
+- 🚀 Go: A space for Go language experiments.
+- ☕ Java: Java code snippets reside here.
+- 🐚 Shell: Shell scripts and commands can be found in this bin.
+- ☸️ Kubernetes: Explore YAML configurations for Kubernetes deployment.
 
 ## How to Contribute
 
