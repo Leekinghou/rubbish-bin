@@ -4,26 +4,16 @@ import (
 	"fmt"
 	"io"
 	"net/http"
-	"time"
+	"os"
 )
 
 func hello(w http.ResponseWriter, r *http.Request) {
-	io.WriteString(w, "[v2] Hello, Kubernetes!")
+	host, _ := os.Hostname()
+	dbURL := os.Getenv("DB_URL")
+	io.WriteString(w, fmt.Sprintf("[v4] Hello, Kubernetes! From host: %s, Get Database Connect URL: %s", host, dbURL))
 }
 
 func main() {
-	started := time.Now()
-	http.HandleFunc("/healthz", func(w http.ResponseWriter, r *http.Request) {
-		duration := time.Since(started)
-		if duration.Seconds() > 15 {
-			w.WriteHeader(http.StatusInternalServerError)
-			w.Write([]byte(fmt.Sprintf("error: %v", duration.Seconds())))
-		} else {
-			w.WriteHeader(http.StatusOK)
-			w.Write([]byte("ok"))
-		}
-	})
-
 	http.HandleFunc("/", hello)
 	http.ListenAndServe(":3000", nil)
 }

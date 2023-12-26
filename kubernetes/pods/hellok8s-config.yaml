@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hellok8s-pod
+spec:
+  containers:
+  - name: hellok8s-container
+    image: baikal0716/hellok8s:v4
+    env:
+      - name: DB_URL
+        valueFrom:
+          configMapKeyRef:
+            name: hellok8s-config
+            key: DB_URL
+
