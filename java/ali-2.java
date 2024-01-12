@@ -60,7 +60,7 @@ public class Solution {
 
         // 打印翻转后的链表
         while (head != null) {
-            System.out.print(head.val + "-->");
+            System.out.print(head.val + "->");
             head = head.next;
         }
     }
